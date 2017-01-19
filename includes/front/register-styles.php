@@ -19,9 +19,14 @@ function bike_add_theme_scripts(){
   // add jquery and tether js
   wp_enqueue_script('scripts', get_theme_file_uri('js/tether.js'), array('jquery'), filemtime(get_theme_file_path('js/tether.js')), true);
 
+  // just add jquery  ( not worked.. )
+  wp_enqueue_script('jquery');
+
   // add bootstrap.js
   wp_enqueue_script('bootstrap', get_theme_file_uri('js/bootstrap.js'), array(), filemtime(get_theme_file_path('js/bootstrap.js')), true);
 
+  // add rest.js
+  wp_enqueue_script('rest', get_theme_file_uri('js/rest.js'), null, 1.0, true);
 }
 
 
