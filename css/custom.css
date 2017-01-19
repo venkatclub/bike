@@ -1,0 +1,77 @@
+
+h1 .titlea{
+  text-decoration: none;
+}
+
+/* menu - current page active setting*/
+
+.header-nav{
+  background-color: #333;
+}
+.header-nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /*background-color: #ddd;*/
+}
+.header-nav ul li{
+  float: left;
+}
+.header-nav ul li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.header-nav ul li a:hover {
+  background-color: #111;
+}
+.current-menu-item {
+  background-color: green;
+}
+.search-form{
+  margin-top: 20px;
+}
+
+
+
+
+
+/* sidebar */
+.aside{
+  background-color: #ddd;
+}
+/*@media (max-width: 768px) {
+.sidebar{
+  margin-top: 20px;
+}
+}*/
+
+
+
+/* next and previous post navigation */
+/*    **Problem** when screen size reduce it disappears  */
+.prev-post{
+  float: left;
+  margin-bottom: 20px;
+}
+.next-post{
+  float: right;
+  margin-bottom: 20px;
+}
+
+
+
+/* footer */
+footer{
+  clear: both;
+}
+
+
+/* thumbnail */
+img{
+  max-width: 100%;
+  height: auto;
+}
