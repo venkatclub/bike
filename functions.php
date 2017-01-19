@@ -55,6 +55,7 @@ include(get_theme_file_path('includes/widget-classes/custom-search-widget.php'))
 /*********  actions and filters hooks ******/
 // register the scripts and css files - inlcudes/frint/register-styles.php
 add_action('wp_enqueue_scripts', 'bike_add_theme_scripts' ,999);
+// add_action('admin_enqueue_scripts', 'bike_add_theme_scripts' ,999);
 
 // register menus - includes/front/register-menu.php
 add_action('after_setup_theme', 'bike_register_menus');
