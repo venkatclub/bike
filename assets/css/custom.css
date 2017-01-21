@@ -75,3 +75,20 @@ img{
   max-width: 100%;
   height: auto;
 }
+
+
+
+/* quick add posts */
+.add-posts-container{
+  background-color: #ddd;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+#add-title,
+#add-content {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  margin: 0 0 10px 0;
+  box-sizing: border-box;
+}

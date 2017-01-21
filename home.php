@@ -6,6 +6,10 @@ get_header('home');  ?>
 
   <div class="row">
     <div class="col-md-8">
+
+    <?php get_template_part('template-parts/rest','add-posts'); ?>
+
+
       <?php
         if(have_posts()) :
           /* start the loop*/
