@@ -59,7 +59,15 @@ if(quickPostsBtn) {
     // qp.setRequestHeader('X-WP-Nonce', wpApiSettings.nonce);
     qp.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
     qp.send(JSON.stringify(quickPostData));
-
+    // if sucess make the text filed empty , wordpress sends 201 if sucess
+    qp.onreadystatechange = funcion(){
+      if(qp.readyState == 4){  // 4th state = Done .. https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
+        if(qp.status == 201){
+          "title": document.getElementById('add-title').value= ""
+          "content": document.getElementById('add-content').value= ""
+        }
+      }
+    }
 
   });
 }

@@ -29,7 +29,7 @@ function bike_add_theme_scripts(){
   wp_enqueue_script('rest', get_theme_file_uri('js/rest.js'), null, 1.0, true);
 
   //for Nonce value..  ( not user - rest - given the what what we give while enqueue js file )
-  wp_localize_script('rest', 'forNonce', array(
+  wp_localize_script('rest', 'callback', array(
     'nonce' => wp_create_nonce('wp_rest'),
     'siteURL' => get_site_url()
   ));
