@@ -10,8 +10,9 @@ function bike_add_theme_scripts(){
   // add bootstrap.css
   wp_enqueue_style('bootstrap', get_theme_file_uri('assets/css/bootstrap.css'));
 
-  //add cutom css file
-  wp_enqueue_style('custom', get_theme_file_uri('assets/css/custom.css'));
+  //add cutom css file  - custom.css is inital css, when using sass css file is migrate to main.css
+  // wp_enqueue_style('custom', get_theme_file_uri('assets/css/custom.css'));
+  wp_enqueue_style('custom', get_theme_file_uri('assets/css/main.css'));
 
   // add style.css
   wp_enqueue_style('style', get_stylesheet_uri() );
