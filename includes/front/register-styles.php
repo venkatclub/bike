@@ -34,6 +34,9 @@ function bike_add_theme_scripts(){
     'siteURL' => get_site_url()
   ));
 
+  // it may not needed 
+  wp_enqueue_script( 'wp-api' );
+
 }
 
 
