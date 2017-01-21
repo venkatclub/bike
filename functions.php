@@ -77,6 +77,9 @@ add_action('widgets_init','bike_widget_init');
 
 
 
+//  adding nonce ..  ( may be added in register-styles.php)
+// wp_localize_script( 'wp-api', 'wpApiSettings', array( 'root' => esc_url_raw( rest_url() ), 'nonce' => wp_create_nonce( 'wp_rest' ) ) );
+
 
 
 

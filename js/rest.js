@@ -36,3 +36,30 @@ function createHtml(postsData){
   }
   displayPosts.innerHTML= htmlString;
 }
+
+
+
+
+
+
+//  quick posts ..
+var quickPostsBtn = document.getElementById('add-post-btn');
+
+if(quickPostsBtn) {
+  quickPostsBtn.addEventListener("click", function() {
+    var quickPostData = {
+      "title": document.getElementById('add-title').value,
+      "content": document.getElementById('add-content').value,
+      "status": "publish"
+    }
+
+    var qp = new XMLHttpRequest();
+    qp.open('POST', callback.siteURL + 'wp-json/wp/v2/posts');
+    qp.setRequestHeader("X-WP-Nonce", callback.nonce);
+    // qp.setRequestHeader('X-WP-Nonce', wpApiSettings.nonce);
+    qp.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+    qp.send(JSON.stringify(quickPostData));
+
+
+  });
+}

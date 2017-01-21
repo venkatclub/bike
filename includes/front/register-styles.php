@@ -19,7 +19,7 @@ function bike_add_theme_scripts(){
   // add jquery and tether js
   wp_enqueue_script('scripts', get_theme_file_uri('js/tether.js'), array('jquery'), filemtime(get_theme_file_path('js/tether.js')), true);
 
-  // just add jquery  ( not worked.. )
+  // just add jquery  ( not worked.. or working as loading at header ..)
   wp_enqueue_script('jquery');
 
   // add bootstrap.js
@@ -27,6 +27,13 @@ function bike_add_theme_scripts(){
 
   // add rest.js
   wp_enqueue_script('rest', get_theme_file_uri('js/rest.js'), null, 1.0, true);
+
+  //for Nonce value..  ( not user - rest - given the what what we give while enqueue js file )
+  wp_localize_script('rest', 'forNonce', array(
+    'nonce' => wp_create_nonce('wp_rest'),
+    'siteURL' => get_site_url()
+  ));
+
 }
 
 
